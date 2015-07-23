@@ -1,0 +1,22 @@
+﻿<Window x:Class="AddressBook.Desktop.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://www.codeplex.com/prism"
+        xmlns:inf="clr-namespace:AddressBook.Infrastructure;assembly=AddressBook.Infrastructure"
+        Height="Auto" Width="Auto">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"></ColumnDefinition>
+            <ColumnDefinition Width="70*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <ContentControl Grid.Row="1" Grid.Column="0" prism:RegionManager.RegionName="{x:Static inf:RegionNames.CONTENT_REGION_LEFT}"></ContentControl>
+        <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="{x:Static inf:RegionNames.CONTENT_REGION_RIGHT}"></ContentControl>
+        
+    </Grid>
+</Window>
